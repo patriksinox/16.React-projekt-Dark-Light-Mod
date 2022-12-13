@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { TfiLightBulb } from "react-icons/tfi";
 
 function App() {
-  const [tema, setTema] = useState("dark-theme");
+  const [tema, setTema] = useState("light-theme");
 
   useEffect(() => {
     document.documentElement.classList.add(tema);
