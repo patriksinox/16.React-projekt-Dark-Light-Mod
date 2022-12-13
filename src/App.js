@@ -11,15 +11,10 @@ function App() {
     document.documentElement.classList.add(tema);
   }, [tema]);
 
-  const zmenaTemy = () => {
-    if (tema === "light-theme") {
-      document.documentElement.classList.remove(tema);
-      return setTema("dark-theme");
-    }
-    if (tema === "dark-theme") {
-      document.documentElement.classList.remove(tema);
-      return setTema("light-theme");
-    }
+   const zmenaTemy = () => {
+    document.documentElement.classList.remove(tema);
+    if (tema === "light-theme") return setTema("dark-theme");
+    if (tema === "dark-theme") return setTema("light-theme");
   };
 
   return (
